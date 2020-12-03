@@ -1,0 +1,14 @@
+C:\Users\krits\Desktop\AppFinal\bin\Debug\Resources\bookshop_log.ldf
+C:\Users\krits\Desktop\AppFinal\bin\Debug\Resources\bookshop.mdf
+C:\Users\krits\Desktop\AppFinal\bin\Debug\AppFinal.exe.config
+C:\Users\krits\Desktop\AppFinal\bin\Debug\AppFinal.exe
+C:\Users\krits\Desktop\AppFinal\bin\Debug\AppFinal.pdb
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.csprojAssemblyReference.cache
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.man_employee.resources
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.Properties.Resources.resources
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.csproj.GenerateResource.cache
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.csproj.CoreCompileInputs.cache
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.exe
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.pdb
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.login.resources
+C:\Users\krits\Desktop\AppFinal\obj\Debug\AppFinal.main_menu.resources
