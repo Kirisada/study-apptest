@@ -66,6 +66,7 @@ namespace AppFinal
             // 
             // txt_Password
             // 
+            this.txt_Password.Enabled = false;
             this.txt_Password.Location = new System.Drawing.Point(37, 205);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.Size = new System.Drawing.Size(274, 32);
@@ -82,6 +83,7 @@ namespace AppFinal
             // 
             // txt_Name
             // 
+            this.txt_Name.Enabled = false;
             this.txt_Name.Location = new System.Drawing.Point(37, 137);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(274, 32);
@@ -98,6 +100,7 @@ namespace AppFinal
             // 
             // txt_EmpID
             // 
+            this.txt_EmpID.Enabled = false;
             this.txt_EmpID.Location = new System.Drawing.Point(37, 69);
             this.txt_EmpID.Name = "txt_EmpID";
             this.txt_EmpID.Size = new System.Drawing.Size(274, 32);

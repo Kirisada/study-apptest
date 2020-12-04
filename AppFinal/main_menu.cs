@@ -26,5 +26,11 @@ namespace AppFinal
             Form man_emp = new man_employee();
             man_emp.ShowDialog();
         }
+
+        private void btnManCus_Click(object sender, EventArgs e)
+        {
+            Form man_customer = new data_employee();
+            man_customer.ShowDialog();
+        }
     }
 }

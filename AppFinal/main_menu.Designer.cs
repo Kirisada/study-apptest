@@ -32,8 +32,6 @@ namespace AppFinal
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.btnBookRentel = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnBookReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.btnEXIT = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.btnManEmp = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,32 +72,12 @@ namespace AppFinal
             this.menuStrip2.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(200, 200);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnBookRentel,
-            this.btnBookReturn,
             this.btnEXIT});
             this.menuStrip2.Location = new System.Drawing.Point(3, 267);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(861, 232);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
-            // 
-            // btnBookRentel
-            // 
-            this.btnBookRentel.Image = global::AppFinal.Properties.Resources.real_estate;
-            this.btnBookRentel.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBookRentel.Name = "btnBookRentel";
-            this.btnBookRentel.Size = new System.Drawing.Size(212, 228);
-            this.btnBookRentel.Text = "Book Rentel";
-            this.btnBookRentel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // btnBookReturn
-            // 
-            this.btnBookReturn.Image = global::AppFinal.Properties.Resources._return;
-            this.btnBookReturn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBookReturn.Name = "btnBookReturn";
-            this.btnBookReturn.Size = new System.Drawing.Size(212, 228);
-            this.btnBookReturn.Text = "Book Return";
-            this.btnBookReturn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // btnEXIT
             // 
@@ -142,8 +120,9 @@ namespace AppFinal
             this.btnManCus.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnManCus.Name = "btnManCus";
             this.btnManCus.Size = new System.Drawing.Size(212, 228);
-            this.btnManCus.Text = "Manage Customer";
+            this.btnManCus.Text = "Employee Data";
             this.btnManCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnManCus.Click += new System.EventHandler(this.btnManCus_Click);
             // 
             // btnManBook
             // 
@@ -194,8 +173,6 @@ namespace AppFinal
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem btnBookRentel;
-        private System.Windows.Forms.ToolStripMenuItem btnBookReturn;
         private System.Windows.Forms.ToolStripMenuItem btnEXIT;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem btnManEmp;
