@@ -51,7 +51,7 @@ namespace AppFinal
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(339, 43);
             this.label1.TabIndex = 3;
-            this.label1.Text = "BOOK SHOP SYSTEM";
+            this.label1.Text = "BOOK DATA SYSTEM";
             // 
             // groupBox1
             // 
@@ -101,7 +101,7 @@ namespace AppFinal
             this.menuStrip1.Location = new System.Drawing.Point(3, 28);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(861, 232);
-            this.menuStrip1.TabIndex = 4;
+            this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btnManEmp
@@ -156,7 +156,7 @@ namespace AppFinal
             this.MinimumSize = new System.Drawing.Size(908, 640);
             this.Name = "main_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BOOK SHOP";
+            this.Text = "BOOK DATA";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.menuStrip2.ResumeLayout(false);

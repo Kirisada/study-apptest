@@ -25,6 +25,7 @@ namespace AppFinal
         string strSQL;
         string method;
         string preID;
+        string preQ,preNext;
         
 
         private void man_employee_Load(object sender, EventArgs e)
@@ -53,6 +54,7 @@ namespace AppFinal
             }
             int rows = dt.Rows.Count - 1;
             preID = genID(dt.Rows[rows]["empID"].ToString());
+            preQ = preID;
             btnSave.Enabled = false;
             btnEdit.Enabled = false;
             btnDel.Enabled = false;
@@ -119,16 +121,36 @@ namespace AppFinal
             btnSave.Enabled = true;
             btnDel.Enabled = false;
             btnEdit.Enabled = false;
-            if (txt_EmpID.Text != preID)
+            //MessageBox.Show(preID);
+            txt_EmpID.Text = preID;
+            string pp = genID(preQ);
+            
+            if (preNext == preQ)
             {
+                MessageBox.Show("preNext " + preNext);
+            }
+            MessageBox.Show("show b if " + preID + " pp b if " + pp + " pre q " + preQ + " pre Next " + preNext);
+            if (preNext != pp)
+            {
+                MessageBox.Show("if 1 " + preID);
                 txt_EmpID.Text = preID;
+                MessageBox.Show("show " + txt_EmpID.Text);
+                preID = txt_EmpID.Text;
+                preNext = genID(preQ);
             }
             else
             {
-                txt_EmpID.Text = genID(txt_EmpID.Text);
-                preID = txt_EmpID.Text;
+                MessageBox.Show("else " + preID);
+                txt_EmpID.Text = genID(preID);
+                //preQ = genID(preID);
+                //preNext = genID(pp);
+                //preID = txt_EmpID.Text;
+                
             }
             
+            //preID = genID(preID);
+            
+                        
             method = "Add";
         }
 
@@ -153,7 +175,12 @@ namespace AppFinal
                     method = "";
                     
                     MessageBox.Show("Add Successfully");
-                    preID = txt_EmpID.Text;
+                    preID = genID(preID);
+                    //preQ = preID;
+                    MessageBox.Show("out" + preID);
+                    txt_EmpID.Clear();
+                    txt_Name.Clear();
+                    txt_Password.Clear();
                 
                 }
                 catch (Exception err)
@@ -183,7 +210,10 @@ namespace AppFinal
                     method = "";
                     
                     MessageBox.Show("Edit Successfully");
-                    
+                    txt_EmpID.Clear();
+                    txt_Name.Clear();
+                    txt_Password.Clear();
+
                 }
                 catch (Exception err)
                 {
@@ -214,10 +244,10 @@ namespace AppFinal
                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 preID = txt_EmpID.Text;
+                
                 try
                 {
                     strSQL = "DELETE FROM employee  WHERE empID ='" + txt_EmpID.Text.Trim() + "'";
-
                     SqlCommand comDelete = new SqlCommand();
                     comDelete.CommandType = CommandType.Text;
                     comDelete.CommandText = strSQL;
