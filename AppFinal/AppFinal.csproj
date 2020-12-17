@@ -101,6 +101,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="data_book.resx">
+      <DependentUpon>data_book.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="data_employee.resx">
       <DependentUpon>data_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="man_book.resx">
+      <DependentUpon>man_book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="man_employee.resx">
       <DependentUpon>man_employee.cs</DependentUpon>

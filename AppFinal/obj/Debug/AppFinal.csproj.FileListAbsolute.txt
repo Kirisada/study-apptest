@@ -27,3 +27,5 @@ C:\Users\krits\Desktop\Github\app\AppFinal\obj\Debug\AppFinal.csproj.CoreCompile
 C:\Users\krits\Desktop\Github\app\AppFinal\obj\Debug\AppFinal.exe
 C:\Users\krits\Desktop\Github\app\AppFinal\obj\Debug\AppFinal.pdb
 C:\Users\krits\Desktop\Github\app\AppFinal\obj\Debug\AppFinal.data_employee.resources
+C:\Users\krits\Desktop\Github\app\AppFinal\obj\Debug\AppFinal.data_book.resources
+C:\Users\krits\Desktop\Github\app\AppFinal\obj\Debug\AppFinal.man_book.resources

@@ -32,5 +32,17 @@ namespace AppFinal
             Form man_customer = new data_employee();
             man_customer.ShowDialog();
         }
+
+        private void btnManBook_Click(object sender, EventArgs e)
+        {
+            Form man_book = new man_book();
+            man_book.ShowDialog();
+        }
+
+        private void btnBookData_Click(object sender, EventArgs e)
+        {
+            Form data_book = new data_book();
+            data_book.ShowDialog();
+        }
     }
 }

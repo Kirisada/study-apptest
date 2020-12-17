@@ -126,7 +126,7 @@ namespace AppFinal
             btnSave.Enabled = true;
             btnDel.Enabled = false;
             btnEdit.Enabled = false;
-            MessageBox.Show("Next_" + preNext + "_Max_" + preMax + "_Now_" + preNow + "_Index_" + preIndex);
+            //MessageBox.Show("Next_" + preNext + "_Max_" + preMax + "_Now_" + preNow + "_Index_" + preIndex);
             if (preIndex != "")
             {
                 txt_EmpID.Text = preIndex;

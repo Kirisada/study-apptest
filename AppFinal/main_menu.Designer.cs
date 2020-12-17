@@ -132,6 +132,7 @@ namespace AppFinal
             this.btnManBook.Size = new System.Drawing.Size(212, 228);
             this.btnManBook.Text = "Manage Book";
             this.btnManBook.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnManBook.Click += new System.EventHandler(this.btnManBook_Click);
             // 
             // btnBookData
             // 
@@ -141,6 +142,7 @@ namespace AppFinal
             this.btnBookData.Size = new System.Drawing.Size(212, 228);
             this.btnBookData.Text = "Book Data";
             this.btnBookData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnBookData.Click += new System.EventHandler(this.btnBookData_Click);
             // 
             // main_menu
             // 
