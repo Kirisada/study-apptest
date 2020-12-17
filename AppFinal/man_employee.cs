@@ -24,8 +24,7 @@ namespace AppFinal
         DataTable dt = new DataTable();
         string strSQL;
         string method;
-        string preID;
-        string preQ,preNext;
+        string preMin,preMax,preNow,preNext,preIndex = "";
         
 
         private void man_employee_Load(object sender, EventArgs e)
@@ -53,8 +52,10 @@ namespace AppFinal
                 
             }
             int rows = dt.Rows.Count - 1;
-            preID = genID(dt.Rows[rows]["empID"].ToString());
-            preQ = preID;
+            preMax = dt.Rows[rows]["empID"].ToString();
+            preMin = "EMP0001";
+            preNow = preMax;
+            preNext = genID(preNow);
             btnSave.Enabled = false;
             btnEdit.Enabled = false;
             btnDel.Enabled = false;
@@ -81,7 +82,11 @@ namespace AppFinal
             int gID = int.Parse(op);
             gID += 1;
             string p = gID.ToString();
-            if (gID >= 1000)
+            if(gID > 9999)
+            {
+                MessageBox.Show("Not enough storage space.");
+            }
+            else if (gID >= 1000)
             {
                 sID = "EMP" + p;
             }else if (gID >= 100)
@@ -121,36 +126,21 @@ namespace AppFinal
             btnSave.Enabled = true;
             btnDel.Enabled = false;
             btnEdit.Enabled = false;
-            //MessageBox.Show(preID);
-            txt_EmpID.Text = preID;
-            string pp = genID(preQ);
-            
-            if (preNext == preQ)
+            MessageBox.Show("Next_" + preNext + "_Max_" + preMax + "_Now_" + preNow + "_Index_" + preIndex);
+            if (preIndex != "")
             {
-                MessageBox.Show("preNext " + preNext);
+                txt_EmpID.Text = preIndex;
             }
-            MessageBox.Show("show b if " + preID + " pp b if " + pp + " pre q " + preQ + " pre Next " + preNext);
-            if (preNext != pp)
+            else if (preNext == preMax)
             {
-                MessageBox.Show("if 1 " + preID);
-                txt_EmpID.Text = preID;
-                MessageBox.Show("show " + txt_EmpID.Text);
-                preID = txt_EmpID.Text;
-                preNext = genID(preQ);
+                txt_EmpID.Text = genID(preNext);
             }
             else
             {
-                MessageBox.Show("else " + preID);
-                txt_EmpID.Text = genID(preID);
-                //preQ = genID(preID);
-                //preNext = genID(pp);
-                //preID = txt_EmpID.Text;
-                
+                txt_EmpID.Text = preNext;
             }
             
-            //preID = genID(preID);
-            
-                        
+
             method = "Add";
         }
 
@@ -171,13 +161,24 @@ namespace AppFinal
                     comAdd.CommandType = CommandType.Text;
                     comAdd.CommandText = strSQL;
                     comAdd.Connection = objcon.Conn;
-                    comAdd.ExecuteNonQuery();
+                    comAdd.ExecuteNonQuery();                    
                     method = "";
-                    
+                    preNow = preNext;
+                    if (preMax == preNow) 
+                    {
+
+                    }
+                    else if (preIndex != "")
+                    {
+                        preNow = preMax;
+                        preIndex = "";
+                    }
+                    else
+                    {
+                        preMax = genID(preMax);
+                    }
+
                     MessageBox.Show("Add Successfully");
-                    preID = genID(preID);
-                    //preQ = preID;
-                    MessageBox.Show("out" + preID);
                     txt_EmpID.Clear();
                     txt_Name.Clear();
                     txt_Password.Clear();
@@ -185,7 +186,7 @@ namespace AppFinal
                 }
                 catch (Exception err)
                 {
-                   MessageBox.Show(err.Message);
+                   MessageBox.Show("Fail pls re-check data", err.Message);
                 }
                 
             }
@@ -217,9 +218,10 @@ namespace AppFinal
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(err.Message);
+                    MessageBox.Show("Fail pls re-check data", err.Message);
+
                 }
-                
+
             }
             timer1.Start();
             btnAdd.Enabled = true;
@@ -234,7 +236,7 @@ namespace AppFinal
             Enabletxt(true);
             btnAdd.Enabled = false;
             btnSave.Enabled = true;
-            btnDel.Enabled = false;
+            btnDel.Enabled = true;
             method = "Edit";
         }
 
@@ -243,8 +245,7 @@ namespace AppFinal
             if (MessageBox.Show("Do you want delete data?", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                preID = txt_EmpID.Text;
-                
+                preIndex = txt_EmpID.Text;
                 try
                 {
                     strSQL = "DELETE FROM employee  WHERE empID ='" + txt_EmpID.Text.Trim() + "'";
@@ -259,7 +260,8 @@ namespace AppFinal
                 }
                 catch (Exception err)
                 {
-                    MessageBox.Show(err.Message);
+                    MessageBox.Show("Fail pls re-check data", err.Message);
+
                 }
                 timer1.Start();
                 txt_EmpID.Clear();
@@ -284,7 +286,7 @@ namespace AppFinal
             }
             btnAdd.Enabled = true;
             btnEdit.Enabled = true;
-            btnDel.Enabled = true;
+            btnDel.Enabled = false;
 
         }
 
@@ -304,6 +306,8 @@ namespace AppFinal
             btnEdit.Enabled = false;
             btnSave.Enabled = false;
             btnDel.Enabled = false;
+            preNext = genID(preNow);
+
         }
     }
 
