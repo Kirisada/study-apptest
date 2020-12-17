@@ -63,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseConn.cs" />
+    <Compile Include="data_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="data_book.Designer.cs">
+      <DependentUpon>data_book.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     </Compile>
     <Compile Include="data_employee.Designer.cs">
       <DependentUpon>data_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="man_book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="man_book.Designer.cs">
+      <DependentUpon>man_book.cs</DependentUpon>
     </Compile>
     <Compile Include="man_employee.cs">
       <SubType>Form</SubType>
